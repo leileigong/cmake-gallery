@@ -1,6 +1,10 @@
 # cmake-gallery
 cmake一些学习示例
 
+## hello world
+[第一个cmake工程hello world](helloworld\readme.md)
+
+
 ## Keil-Arm-demo
 Keil-Arm-demo是由cmake构建的最简单的`hello world`工程。目录结构如下：
 ```sh
