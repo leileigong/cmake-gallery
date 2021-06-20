@@ -2,7 +2,7 @@
 cmake一些学习示例
 
 ## hello world
-[第一个cmake工程hello world](helloworld\readme.md)
+[第一个cmake工程hello world](helloworld/readme.md)
 
 
 ## Keil-Arm-demo
