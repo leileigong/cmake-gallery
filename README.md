@@ -1,3 +1,5 @@
+[toc]
+
 # cmake-gallery
 cmake一些学习示例
 
@@ -6,6 +8,9 @@ cmake一些学习示例
 
 ## multi-level-directory
 [cmake构建多级源码目录工程](multi-level-directory/readme.md)
+
+## export-shared-lib
+[编译生成共享库（动态或静态）](export-shared-lib/readme.md)
 
 ## Keil-Arm-demo
 Keil-Arm-demo是由cmake构建的最简单的`hello world`工程。目录结构如下：
