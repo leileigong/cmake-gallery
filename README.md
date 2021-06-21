@@ -12,6 +12,13 @@ cmake一些学习示例
 ## export-shared-lib
 [编译生成共享库（动态或静态）](export-shared-lib/readme.md)
 
+## import-static-lib
+[引用外部共享库库](import-static-lib/readme.md)
+
+> 使用VS工程时，链接报错,暂时没找到解决办法。
+> LINK : fatal error LNK1181: 无法打开输入文件“testlib-NOTFOUND.obj” [E:\code\cmake-gallery\import-static-lib\build\app.vcxproj]
+
+
 ## Keil-Arm-demo
 Keil-Arm-demo是由cmake构建的最简单的`hello world`工程。目录结构如下：
 ```sh
