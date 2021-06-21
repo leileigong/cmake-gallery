@@ -18,6 +18,8 @@ cmake一些学习示例
 > 使用VS工程时，链接报错,暂时没找到解决办法。
 > LINK : fatal error LNK1181: 无法打开输入文件“testlib-NOTFOUND.obj” [E:\code\cmake-gallery\import-static-lib\build\app.vcxproj]
 
+## standard-cmake-project
+[标准CMake工程样例](standard-project/readme.md)
 
 ## Keil-Arm-demo
 Keil-Arm-demo是由cmake构建的最简单的`hello world`工程。目录结构如下：

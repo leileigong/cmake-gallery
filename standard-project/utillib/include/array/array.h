@@ -1,0 +1,1 @@
+int merge_array(int *arr1, int arr1len,  int *arr2, int arr2len);
