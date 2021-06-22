@@ -21,6 +21,14 @@ cmake一些学习示例
 ## standard-cmake-project
 [标准CMake工程样例](standard-project/readme.md)
 
+## standard-cmake-project-en-compile-options
+[标准CMake工程样例-使用编译选项](standard-project-en-compile-options/readme.md)
+
+在顶层CMakeLists.txt中增加两个编译选项:
+- `USE_BIN_LIB_FILE` : 控制编译第三方库源码或使用编译好的第三库二进制文件
+- `ENABLE_LOG`: 在源文件中使用开启日志输出
+
+
 ## Keil-Arm-demo
 Keil-Arm-demo是由cmake构建的最简单的`hello world`工程。目录结构如下：
 ```sh
