@@ -1,27 +1,23 @@
-## import-static-lib
+## import-static-lib2
 
-> 本示例演示如何导入外部第三方库文件
+> 本示例演示如何通过`find_package`导入外部第三方库文件
 
 ### 工程目录结构
 ```
-$ tree
+[root@VM-0-9-centos import-static-lib2]# tree
 .
+|-- build
+|-- cmake
+|   `-- Findtestlib.cmake
 |-- CMakeLists.txt
-|-- array.h
-|-- lib
-|   |-- libtestlib.a
-|   `-- testlib.lib
 |-- main.c
 `-- readme.md
 
-2 directories, 6 files
+2 directories, 4 files
 ```
 
 ### windows平台构建
-
-> 使用VS工程时，链接动态库dll报错,暂时没找到解决办法。
-> LINK : fatal error LNK1181: 无法打开输入文件“testlib-NOTFOUND.obj” [E:\code\cmake-gallery\import-static-lib\build\app.vcxproj]
-
+> 需要先运行`import-static-lib2`工程，安装testlib库安装在`D:\Program Files (x86)\testlib`下。
 
 step1.在helloworld目录下创建build目录，存放构建目标和临时文件
 ```powershell
@@ -33,8 +29,7 @@ step2.在build目录下配置工程
 > 需要事先安装一种C编译器，这里使用VS2015。
 
 ```powershell
-PS> cd build
-PS E:\code\cmake-gallery\import-static-lib\build> cmake ..
+PS E:\code\cmake-gallery\import-static-lib2\build> cmake ..
 -- Building for: Visual Studio 14 2015
 -- Selecting Windows SDK version  to target Windows 10.0.17134.
 -- The C compiler identification is MSVC 19.0.23026.0
@@ -53,8 +48,8 @@ PS E:\code\cmake-gallery\import-static-lib\build> cmake ..
 -- Detecting CXX compile features - done
 -- Configuring done
 -- Generating done
--- Build files have been written to: E:/code/cmake-gallery/import-static-lib/build
-PS E:\code\cmake-gallery\import-static-lib\build
+-- Build files have been written to: E:/code/cmake-gallery/import-static-lib2/build
+PS E:\code\cmake-gallery\import-static-lib2\build>
 ```
 
 setp3.编译工程
@@ -63,23 +58,16 @@ Relase版的命令：
 `cmake --build . --config  Release`
 
 ```powershell
-PS E:\code\cmake-gallery\import-static-lib\build> cmake --build . --config Release
+PS E:\code\cmake-gallery\import-static-lib2\build> cmake --build . --config  Release
 Microsoft (R) 生成引擎版本 14.0.23107.0
 版权所有(C) Microsoft Corporation。保留所有权利。
 
   Checking Build System
-  Building Custom Rule E:/code/cmake-gallery/import-static-lib/CMakeLists.txt
+  Building Custom Rule E:/code/cmake-gallery/import-static-lib2/CMakeLists.txt
   main.c
-  app.vcxproj -> E:\code\cmake-gallery\import-static-lib\build\Release\app.exe
-  Building Custom Rule E:/code/cmake-gallery/import-static-lib/CMakeLists.txt
-PS E:\code\cmake-gallery\import-static-lib\build>
-```
-
-step4.运行：
-```powershell
-PS E:\code\cmake-gallery\import-static-lib\build> E:\code\cmake-gallery\import-static-lib\build\Release\app.exe
-1 2 3 4 5 6
-PS E:\code\cmake-gallery\import-static-lib\build>
+  app.vcxproj -> E:\code\cmake-gallery\import-static-lib2\build\Release\app.exe
+  Building Custom Rule E:/code/cmake-gallery/import-static-lib2/CMakeLists.txt
+PS E:\code\cmake-gallery\import-static-lib2\build>
 ```
 
 ### linux(CentOS)平台构建
@@ -99,15 +87,13 @@ PS E:\code\cmake-gallery\import-static-lib\build>
 -- Detecting CXX compile features - done
 -- Configuring done
 -- Generating done
--- Build files have been written to: /root/cmake-gallery/import-static-lib/build
-[root@VM-0-9-centos build]#
-[root@VM-0-9-centos build]# cmake --build .
+-- Build files have been written to: /root/cmake-gallery/import-static-lib2/build
+[root@VM-0-9-centos build]# 
+[root@VM-0-9-centos build]# make
 [ 50%] Building C object CMakeFiles/app.dir/main.c.o
 [100%] Linking C executable app
 [100%] Built target app
-[root@VM-0-9-centos build]#
-[root@VM-0-9-centos build]# ll app
--rwxr-xr-x 1 root root 8528 Jun 21 12:04 app
-[root@VM-0-9-centos build]# ./app
-1 2 3 4 5 6 [root@VM-0-9-centos build]#
+[root@VM-0-9-centos build]# ./app 
+1 2 3 4 5 6 
 ```
+

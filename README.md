@@ -12,11 +12,14 @@ cmake一些学习示例
 ## export-shared-lib
 [编译生成共享库（动态或静态）](export-shared-lib/readme.md)
 
+## export-shared-lib2
+[install安装共享库到指定位置](export-shared-lib2/readme.md)
+
 ## import-static-lib
 [引用外部共享库库](import-static-lib/readme.md)
 
-> 使用VS工程时，链接报错,暂时没找到解决办法。
-> LINK : fatal error LNK1181: 无法打开输入文件“testlib-NOTFOUND.obj” [E:\code\cmake-gallery\import-static-lib\build\app.vcxproj]
+## import-static-lib2
+[find_package引用外部共享库库](import-static-lib2/readme.md)
 
 ## standard-cmake-project
 [标准CMake工程样例](standard-project/readme.md)
