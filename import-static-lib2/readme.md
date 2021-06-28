@@ -1,6 +1,6 @@
 ## import-static-lib2
 
-> 本示例演示如何通过`find_package`导入外部第三方库文件
+> 本示例演示如何通过`find_package`导入自定义库文件
 
 ### 工程目录结构
 ```

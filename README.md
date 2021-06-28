@@ -16,10 +16,13 @@ cmake一些学习示例
 [install安装共享库到指定位置](export-shared-lib2/readme.md)
 
 ## import-static-lib
-[引用外部共享库库](import-static-lib/readme.md)
+[引用外部共享库](import-static-lib/readme.md)
 
 ## import-static-lib2
-[find_package引用外部共享库库](import-static-lib2/readme.md)
+[find_package引用自定义库文件](import-static-lib2/readme.md)
+
+## import-static-lib3
+[find_package引用标准第三方库OpenSSL](import-static-lib3/readme.md)
 
 ## standard-cmake-project
 [标准CMake工程样例](standard-project/readme.md)
