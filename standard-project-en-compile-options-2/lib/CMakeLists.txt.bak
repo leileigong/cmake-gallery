@@ -1,0 +1,1 @@
+link_directories(${PROJECT_SOURCE_DIR}/lib) #指定动态连接库的路径

@@ -1,0 +1,2 @@
+#cmakedefine USE_BIN_LIB_FILE
+#cmakedefine ENABLE_LOG

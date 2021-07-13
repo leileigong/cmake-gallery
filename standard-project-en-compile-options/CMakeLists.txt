@@ -16,15 +16,13 @@ option(USE_BIN_LIB_FILE "是否使用编译好的库文件"
 option(ENABLE_LOG "是否启用log输出" 
         ON)
 
+
 if(USE_BIN_LIB_FILE)
     # 必须在add_executable之前调用
     link_directories(${PROJECT_SOURCE_DIR}/lib) #指定动态连接库的路径
+else()
+    add_subdirectory(utillib)
 endif(USE_BIN_LIB_FILE)
 
 add_subdirectory(src)
-
-if (!USE_BIN_LIB_FILE)
-    add_subdirectory(utillib)
-endif (!USE_BIN_LIB_FILE)
-
 

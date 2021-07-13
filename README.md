@@ -26,9 +26,20 @@ cmake一些学习示例
 
 ## standard-cmake-project
 [标准CMake工程样例](standard-project/readme.md)
+- 简化的顶层CMakeLists.txt
+
+[标准CMake工程样例2](standard-project-2/readme.md)
+- 顶层CMakeLists.txt中定义executable
+- 使用target_include_directories代替include_directories
 
 ## standard-cmake-project-en-compile-options
 [标准CMake工程样例-使用编译选项](standard-project-en-compile-options/readme.md)
+- 简化的顶层CMakeLists.txt
+
+[标准CMake工程样例-使用编译选项2](standard-project-en-compile-options-2/readme.md)
+- 顶层CMakeLists.txt中定义executable
+- 使用target_include_directories代替include_directories
+
 
 在顶层CMakeLists.txt中增加两个编译选项:
 - `USE_BIN_LIB_FILE` : 控制编译第三方库源码或使用编译好的第三库二进制文件
