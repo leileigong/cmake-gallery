@@ -15,6 +15,9 @@ cmake一些学习示例
 ## export-shared-lib2
 [install安装共享库到指定位置](export-shared-lib2/readme.md)
 
+## export-shared&static-lib2
+[同时生成静态库和动态库](export-shared&static-lib/readme.md)
+
 ## import-static-lib
 [引用外部共享库](import-static-lib/readme.md)
 
